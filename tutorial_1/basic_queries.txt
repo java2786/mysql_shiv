@@ -1,0 +1,68 @@
+MySQL -> Database management System -> DBMS
+
+Install
+
+machine ip : localhost
+port: 3306
+user: root
+pwd: root
+
+To get entry via cmd:
+	mysql --host localhost -u root --port 3306 -proot
+
+
+
+Database name - shop
+table - items
+	each item has
+		name, price
+
+
+
+
+create table items(
+	name varchar(20),
+	price int
+);
+
+
+Name - mobile, price - 12000
+
+
+CRUD (Item -> data)
+Create -> data
+Read -> data
+Update -> data
+Delete -> Data
+
+
+
+insert into items values('mobile', 12000);
+insert into items values('shirt', 600);
+insert into items values('pen', 50);
+insert into items values('book', 150);
+
+
+insert into items values
+('bike', 89000),
+('burger', 89),
+('car', 999000),
+('tv', 19000);
+
+
+
+
+
+Person table with name and age
+
+create table person(name varchar(25), age int);
+
+insert into person values
+('Suhana', 23),
+('Dev', 24),
+('Lokesh', 27),
+('Tina', 20),
+('Tarkeshwar Nath Pandey', 24);
+
+
+
