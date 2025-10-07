@@ -1,0 +1,72 @@
+connect to mysql db
+=> mysql -u root -proot
+
+check databases
+=> show databases;
+
+create database with name 'tutorial'
+=> create database tutorial;
+
+enter into the database
+=> use tutorial;
+
+list tables in a database
+=> show tables;
+
+Create table students
+=> create table students(
+	name varchar(25),
+	roll int,
+	score int,
+	grade varchar(1),
+	address varchar(50)
+);
+
+Describe table
+=> desc students;
+
+
+Save student in table - 85, 70, 60, 50, 40
+=> insert into students(name, roll, score, grade, address) values
+('Ramesh', 1, 98, 'A', 'Pune'),
+('Mahesh', 2, 38, 'F', 'UP'),
+('Dinesh', 3, 72, 'B', 'Bangalore'),
+('Mukesh', 4, 67, 'C', 'Delhi'),
+('Titesh', 5, 83, 'B', 'Pune'),
+('Ganesh', 6, 57, 'D', 'Delhi'),
+('Rajesh', 7, 44, 'E', 'Bangalore');
+
+
+
+
+Read student from table
+=> select * from students;
+=> select * from students where name = 'Rajesh';
+
+Update student in table
+=> update students
+set score=59,grade='D' 
+where name = 'Rajesh';
+
+
+Delete student from table
+=> delete from students where score < 40;
+
+
+modify table, add column
+=> alter table students add column age int;
+=> alter table students add column email varchar(50);
+
+=> insert into students(name, roll, score, grade, address, age, email) values
+('Jitesh', 8, 68, 'C', 'Punjab', 21, 'demo@gmail.com');
+
+
+
+insert into students (name, roll, score, email, grade, address) values('mukesh', 4, 67, mukesh@123'', 'C', 'Delhi');
+
+
+delete from students where email = 'mukesh@123';
+
+update students
+set email = 'mukesh@yahoo.co.in'
+where roll = 4;
